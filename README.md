@@ -1,0 +1,1 @@
+This is board game generator inspired by game series "Ticket to ride"
