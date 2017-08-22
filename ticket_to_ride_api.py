@@ -1,6 +1,8 @@
 class City:
-    def __init__(self, name=''):
+    def __init__(self, name='', x=0, y=0):
         self.name = name
+        self.x = x
+        self.y = y
 
     def key(self):
         return (self.name)
@@ -27,6 +29,9 @@ class Road:
 
     def __hash__(self):
         return hash(self.key())
+
+    def __str__(self):
+        return f'{str([x.name for x in self.points])}, {self.color}, {self.length}, {self.loco}, {self.tonnel})'
 
 class Board:
     def __init__(self):
