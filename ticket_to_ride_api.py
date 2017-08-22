@@ -43,3 +43,13 @@ class Board:
 
     def check(self, roads):
         return all(len(x.points.intersection(self.cities)) == 2 for x in roads)
+
+class Ticket:
+    def __init__(self, start=None, end=None, cost=0):
+        self.points = frozenset((start, end))
+        self.cost = cost
+
+class Card:
+    def __init__(self, color=0, loco=False):
+        self.color = color
+        self.loco = loco
